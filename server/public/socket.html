@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Hello world</title>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var chat = io.connect('http://localhost/chat')
+    , news = io.connect('http://localhost/news');
+  
+  chat.on('connect', function () {
+    chat.emit('hi!');
+  });
+  chat.on('msg', function() {
+  	console.log(arguments);
+  })
+  
+  news.on('news', function () {
+  	console.log(arguments);
+    news.emit('woot');
+  })
+  news.on('update', function(update) {
+  	console.log(update);
+  });
+
+</script>
+
+	</head>
+	<body>
+    <h1>Socket I/O</h1>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "wasabi-ws",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "cors": "^2.7.1",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "jade": "^1.11.0",
+    "kerberos": "0.0.19",
+    "lodash": "*",
+    "method-override": "^2.3.5",
+    "mongodb": "^2.1.7",
+    "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "opencv": "^5.0.0",
+    "serve-favicon": "^2.3.0",
+    "socket.io": "*"
+  }
+}
