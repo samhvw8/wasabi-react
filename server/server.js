@@ -24,8 +24,7 @@ var io = require('socket.io');
 var fs = require('fs');
 var _ = require('lodash');
 
-var yetify = require('yetify'),
-    config = require('getconfig'),
+var 
     uuid = require('node-uuid'),
     crypto = require('crypto')
     ;
