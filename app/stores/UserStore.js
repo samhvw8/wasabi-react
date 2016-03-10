@@ -3,10 +3,10 @@ import alt from '../libs/alt';
 import UserActions from '../actions/UserActions';
 import io from 'socket.io-client';
 
-var UserSource = io.connect('//localhost:3000/user',
+var UserSource = io.connect('wss://lo.jaringan.info:3000/user',
   {transports: [
-    'websocket', 
     'polling',
+    'websocket', 
     'xhr-polling', 
     'jsonp-polling', 
     'flashsocket', 

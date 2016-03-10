@@ -41,7 +41,8 @@ var common = {
         test: /\.(ttf|eot|svg)(\?[\s\S]+)?$/,
         loader: 'file'
       },
-      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' }
+      { test: /bootstrap-sass\/assets\/javascripts\//, loader: 'imports?jQuery=jquery' },
+      { test: /jquery-touchswipe\/jquery\.touchSwipe\.js$/, loader: 'imports?jQuery=jquery,$=jquery' }
     ]
   },
   // postcss: [ autoprefixer ],
@@ -100,7 +101,7 @@ if(TARGET === 'start' || !TARGET) {
 
       // parse host and port from env so this is easy
       // to customize
-      host: process.env.HOST,
+      host: '0.0.0.0',
       port: process.env.PORT
     },
     plugins: [

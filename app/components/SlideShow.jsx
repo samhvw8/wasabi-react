@@ -1,6 +1,26 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 export default class SlideShow extends React.Component {
+  componentDidMount() {
+    // using jQuery-touchswipe plugin
+    this.slideShowEl = ReactDOM.findDOMNode(this.refs.slideImg);
+    $(this.slideShowEl).swipe({
+      swipe: (event, direction, distance, duration, fingerCount, fingerData) => {
+        switch(direction) {
+          case 'left':
+            this.props.onNext();
+            break;
+          case 'right':
+            this.props.onPrev();
+            break;
+        }
+      }
+    });
+  }
+  componentWillUnmount() {
+    $(this.slideShowEl).swipe("destroy");
+  }
   render() {
     // var slideUrl = null; //this.state.slideDeckData[state.slideIdLecturer].url;
     var slideUrl = null;
@@ -11,7 +31,7 @@ export default class SlideShow extends React.Component {
     console.log('SlideShow', slideUrl);
     return (
       <div className="row">
-        <div className="row"><img src={slideUrl} className="slide-show" /></div>
+        <div className="row" ref="slideImg"><img src={slideUrl} className="slide-show" /></div>
         <div className="row">
           <div className="btn-group btn-group-sm" role="group">
             <button type="button" className="btn btn-default" onClick={this.props.onFirst}>

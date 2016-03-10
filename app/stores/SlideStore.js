@@ -3,7 +3,7 @@ import alt from '../libs/alt';
 import SlideActions from '../actions/SlideActions';
 import io from 'socket.io-client';
 
-var SlideSource = io.connect('//localhost:3000/slide',
+var SlideSource = io.connect('wss://lo.jaringan.info:3000/slide',
   {transports: [
     'websocket', 
     'polling',
@@ -13,7 +13,7 @@ var SlideSource = io.connect('//localhost:3000/slide',
     'htmlfile'
   ]});
 
-var SlideSourceAjax = '//localhost:3000/slides/';
+var SlideSourceAjax = 'https://lo.jaringan.info:3000/slides/';
 
 class SlideStore {
   constructor() {

@@ -55,7 +55,6 @@ export default class Student extends React.Component {
       SlideActions.changeSlideLocal({slideNoLocal: this.state.slideNoLocal -1});
       console.log('handlePrev', this.state);
     }
-    // SlideActions.changeSlideLocal({slideNoLocal: this.state.slideNoLocal > 0 ? this.state.slideNoLocal - 1 : 0 });
   }
   handleNext = (event) => {
     if (this.state.slideNoLocal < this.state.slideDeckLength - 1) {

@@ -1,5 +1,6 @@
 import 'array.prototype.findindex';
 import './main.css';
+import 'jquery-touchswipe/jquery.touchSwipe.js';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -10,6 +11,7 @@ import Lecturer from './components/Lecturer.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import About from './components/About.jsx';
 import alt from './libs/alt';
+import rtc from './libs/rtc';
 import storage from './libs/storage';
 import persist from './libs/persist';
 

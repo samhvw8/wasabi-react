@@ -6,6 +6,7 @@ import UserStore from '../stores/UserStore';
 import SlideActions from '../actions/SlideActions';
 import SlideStore from '../stores/SlideStore';
 import SlideShow from './SlideShow.jsx';
+import LocalVideo from './UserMediaLocal.jsx';
 
 export default class Student extends React.Component {
   constructor(props) {
@@ -41,6 +42,7 @@ export default class Student extends React.Component {
             onNext={this.handleNext}
             onLast={this.handleLast} />
         </AltContainer>
+        <LocalVideo />
       </div>
     );
   }
@@ -55,7 +57,6 @@ export default class Student extends React.Component {
       SlideActions.changeSlideLocal({slideNoLocal: this.state.slideNoLocal -1});
       console.log('handlePrev', this.state);
     }
-    // SlideActions.changeSlideLocal({slideNoLocal: this.state.slideNoLocal > 0 ? this.state.slideNoLocal - 1 : 0 });
   }
   handleNext = (event) => {
     if (this.state.slideNoLocal < this.state.slideDeckLength - 1) {
