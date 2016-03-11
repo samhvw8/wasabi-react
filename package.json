@@ -41,6 +41,7 @@
     "alt": "^0.17.4",
     "alt-container": "^1.0.0",
     "array.prototype.findindex": "^1.0.0",
+    "babel-polyfill": "^6.6.1",
     "jquery": "^2.2.1",
     "jquery-touchswipe": "^1.6.15",
     "node-uuid": "^1.4.3",
